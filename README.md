@@ -1,2 +1,2 @@
-# Yahoo-Finance-Angular
-An Angular module with directives to display data from the Yahoo API finance tables
+# Responsive Embed Angular
+This is an Angular JS module containing a variety of media embeds from popular websites, usage instructions are below for each embed type.
