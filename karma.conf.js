@@ -17,7 +17,7 @@ module.exports = function(config) {
     files: [
       'bower_components/angular/angular.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      'src/js/responsive-embed-angular.js',
+      'src/js/*.js',
       'src/tests/*Spec.js'
     ],
 
