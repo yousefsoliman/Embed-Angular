@@ -6,7 +6,7 @@ Embed your typical `<iframe>` provided media content, within a responsive ratio 
 
 ### Bower
 
-Run `bower install responsive-embed-angular` to download the `src/` folder to your `bower_components/` directory
+Run `bower install responsive-embed-angular` to download the package and it's dependencies to your `bower_components/` directory
 
 ### Add to Application Dependencies
 
