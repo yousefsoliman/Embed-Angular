@@ -1,6 +1,6 @@
 # Responsive Embed Angular
 
-Embed your typical <iframe> provided media content, within a responsive ratio set bounding box, with this Angular module that provides a directive to do so.
+Embed your typical `<iframe>` provided media content, within a responsive ratio set bounding box, with this Angular module that provides a directive to do so.
 
 ## Installation
 
