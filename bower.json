@@ -17,7 +17,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "src/tests",
+    "src/tests"
   ],
   "dependencies": {
     "angular-mocks": "~1.4.5",
