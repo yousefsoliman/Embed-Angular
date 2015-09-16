@@ -1,28 +1,21 @@
 module.exports = function(grunt) {
     // Grunt config
     grunt.initConfig({
-        less: {
+        uglify: {
+            options: {
+                mangle: false
+            },
             dev: {
-                options: {
-                    paths: ['src/css']
-                },
                 files: {
-                    'src/css/responsive-embed-angular.css': 'src/css/responsive-embed-angular.less'
+                'src/js/responsive-embed-angular.min.js': 'src/js/responsive-embed-angular.js'
                 }
-            }
-        },
-        watch: {
-            css: {
-                files: 'src/css/**/*.less',
-                tasks: ['less:dev']
             }
         }
     });
 
     // Load npm tasks
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // For development
-    grunt.registerTask('default', ['less:dev']);
+    grunt.registerTask('default', ['uglify']);
 };

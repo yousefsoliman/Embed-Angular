@@ -1,4 +1,5 @@
 angular.module('responsiveEmbed', []).controller('ResponsiveEmbedController', ['$scope', '$sce', function($scope, $sce) {
+    $scope.ratio = ($scope.ratio) ? $scope.ratio: '16:9';
     $scope.styles = {
         div: 'position:relative;width:100%;padding-bottom:' + (($scope.ratio.split(':')[1] / $scope.ratio.split(':')[0]) * 100) + '%;',
         iframe: 'position:absolute;height:100%;width:100%;top:0;left:0;'

@@ -1,24 +1,29 @@
 describe('responsiveEmbed', function() {
-    var scope, ctrl;
+    var scope, ctrl, sce;
     // Load angular module
     beforeEach(module('responsiveEmbed'));
 
     // Load angular controller
-    beforeEach(inject(function($controller, $rootScope) {
+    beforeEach(inject(function($controller, $rootScope, $sce) {
+        sce = $sce;
         scope = $rootScope;
+        scope.ratio = '';
+        scope.url = 'http://youtube.com/embed/videoID';
+        scope.parameters = 'color=red';
         ctrl = $controller('ResponsiveEmbedController', {$scope: scope});
     }));
 
-    // Tests
-    it('Expect setStyles() to successfully calculate the padding-bottom property', function() {
+    it('Expect scope.ratio to be 16:9 it is falsy', function() {
+        expect(scope.ratio).toBe('16:9');
+    });
+
+    it('Expect styles.div to contain 56.25 if ratio 16:9 is given', function() {
         scope.ratio = '16:9';
         expect(scope.styles.div).toContain('56.25%');
     });
 
-    it('Expect scope parameters to contain a serialized string if given an object', function() {
-        scope.url = '';
-        scope.parameters = '';
-        expect(scope.parameters).toBe('?autoplay=1&color=red');
+    it('Expect src to be a concatenation of url and parameters with ? in between', function() {
+        expect(sce.getTrustedResourceUrl(scope.src)).toBe('http://youtube.com/embed/videoID?color=red');
     });
 
 });

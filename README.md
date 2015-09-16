@@ -19,7 +19,10 @@ Include the JavaScript file `responsive-embed-angular.js` or `responsive-embed-a
 The directive accepts the following attributes to pass data through to the directive;
 
 - `url` - This is the url of your embed e.g. `http://youtube.com/embed/{videoID}`
-- `ratio` - This is the ratio you want your embed to render at e.g. `16:9`, `4:3` or `1:1`
+- `ratio` - This is the ratio you want your embed to render at e.g. `16:9`, `4:3` or `1:1`, default is `16:9`
 - `parameters` - These are additional HTTP GET parameters which will be concatenated to the end of your url with a `?` prefix. These should be passed in a serialized format e.g. `color=red&autoplay=1`.
 
 
+### Example
+
+`<responsive-embed url="http://youtube.com/embed/tnXO-i7944M" ratio="16:9"></responsive-embed>`

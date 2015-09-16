@@ -1,0 +1,26 @@
+{
+  "name": "Responsive-Embed-Angular",
+  "version": "1.0.0",
+  "homepage": "https://github.com/yousefsoliman/Responsive-Embed-Angular",
+  "description": "Embed your typical <iframe> provided media content, within a responsive ratio set bounding box, with this Angular module that provides a directive to do so.",
+  "main": "src/js/responsive-embed-angular.js",
+  "keywords": [
+    "angular",
+    "responsive",
+    "iframe"
+  ],
+  "authors": [
+    "Yousef Soliman"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/tests",
+  ],
+  "dependencies": {
+    "angular-mocks": "~1.4.5",
+    "angular": "~1.4.5"
+  }
+}
